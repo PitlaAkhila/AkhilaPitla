@@ -1,7 +1,7 @@
 const http = require('http');
 const path = require('path');
 const fs = require('fs');
-
+const cors=require('cors')
 const server = http.createServer((req,res)=>{
 
 
@@ -28,14 +28,15 @@ const server = http.createServer((req,res)=>{
 
     }
     else if(req.url ==='/api'){
-
+            res.setHeader('Access-Control-Allow-Origin','*');
             fs.readFile(path.join(__dirname,'public','db.json'),'utf-8',(err, content)=>{
 
                 if (err) throw err;
                 res.writeHead(200, {'Content-Type':'application/json'});
                 res.end(content);
-            })
-
+            
+            });
+        
     }
     else{
 
