@@ -1,6 +1,7 @@
 {
   "attractions":[
      {
+        "sno":1,
         "name":"1.The Grand Canyon",
         "location":"Arizona",
         "significance":"The Grand Canyon's history is deeply intertwined with the Native American cultures of the region,it is  is one of the most iconic and recognizable landscapes in the world, known for its vibrant colors and unique rock formations.",
@@ -9,6 +10,7 @@
         "rating":4.9
      },
      {
+        "sno":2,
         "name":"2.The Statue of Liberty",
         "location":"New York City",
         "significance":"The Statue of Liberty was a gift from France to the United States, dedicated in 1886, and has since become one of the most recognizable and beloved landmarks in the world, it is an iconic symbol of freedom and democracy, representing the values of the United States.",
@@ -17,6 +19,7 @@
         "rating":4.8
      },
      {
+        "sno":3,
         "name":"3.Yellow Stone Natonal Park",
         "location":"Wyoming",
         "significance":"Yellowstone National Park is significant for its unique and diverse geothermal features, including geysers, hot springs, and mud pots, as well as its important role in the conservation and protection of wildlife and natural ecosystems.",
@@ -25,6 +28,7 @@
         "rating":4.8
      },
      {
+        "sno":4,
         "name":"4.Walt Disney World",
         "location":"Florida",
         "significance":"Walt Disney World is known for its cultural impact as a beloved entertainment destination and for its contributions to the entertainment industry, particularly in the areas of animation, theme park design, and immersive storytelling experiences.",
@@ -33,6 +37,7 @@
         "rating":4.7
      },
      {
+        "sno":5,
         "name":"5.Golden Gate Bridge",
         "location":"California",
         "significance":"The Golden Gate Bridge is known for its innovative engineering and design, as well as its status as an iconic landmark and symbol of American engineering excellence, attracting millions of visitors annually.",
@@ -41,6 +46,7 @@
         "rating":4.7
      },
      {
+        "sno":6,
         "name":"6.The National Mall",
         "location":"Washington D.C.",
         "significance":"The National Mall also serves as an important cultural and educational center, featuring numerous museums and institutions dedicated to American history, art, and science.",
@@ -49,6 +55,7 @@
         "rating":4.6
      },
      {
+        "sno":7,
         "name":"7.Niagara Falls",
         "location":"New York",
         "significance":"Niagara Falls, located on the border of the United States and Canada, is significant for its stunning natural beauty, serving as a popular tourist destination and a source of hydroelectric power, as well as its cultural and historical importance as a symbol of the North American frontier and the power of nature.",
@@ -57,6 +64,7 @@
         "rating":4.5
      },
      {
+        "sno":8,
         "name":"8.Universal Studios Hollywood",
         "location":"California",
         "significance":"Universal Studios Hollywood is known for its role in the entertainment industry as a major film and television studio, as well as its status as a popular tourist destination offering visitors immersive experiences and behind-the-scenes looks at movie-making.",
@@ -65,6 +73,7 @@
         "rating":4.5
      },
      {
+        "sno":9,
         "name":"9.The French Quarter",
         "location":"Louisiana",
         "significance":"The French Quarter is significant for its historical and cultural significance, representing a unique blend of French, Spanish, and African-American cultures, and serving as a major center for music, cuisine, and architecture, as well as its status as a hub for tourism and the celebration of Mardi Gras.",
@@ -73,6 +82,7 @@
         "rating":4.5
      },
      {
+        "sno":10,
         "name":"10.Mount Rushmore",
         "location":" South Dakota",
         "significance":"Mount Rushmore known for its artistic and cultural significance, featuring the massive stone-carved faces of four American presidents and serving as a symbol of American democracy, patriotism, and national identity, as well as a popular tourist destination and a tribute to the artistry and skill of its sculptor, Gutzon Borglum.",
