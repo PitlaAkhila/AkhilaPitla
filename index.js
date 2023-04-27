@@ -30,7 +30,7 @@ const server = http.createServer(async (req,res)=>{
         })
 
     }
-    else if(req.url ==='/api' && req.method === 'GET'){
+   /* else if(req.url ==='/api' && req.method === 'GET'){
         try{
             await client.connect();
             console.log("connection established");
@@ -48,6 +48,20 @@ const server = http.createServer(async (req,res)=>{
             await client.close();
             console.log("connection closed")
         }
+    }*/
+    else if (req.url==='/api')
+    {
+        fs.readFile(
+            path.join(__dirname, 'public', 'db.json'),'utf-8',
+                    (err, content) => {
+                                    
+                                    if (err) throw err;
+                                    res.setHeader("Access-Control-Allow-Origin", "*")
+                                    // Please note the content-type here is application/json
+                                    res.writeHead(200, { 'Content-Type': 'application/json' });
+                                    res.end(content);
+                        }
+              );
     }
     else{
 
