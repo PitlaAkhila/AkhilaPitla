@@ -49,19 +49,19 @@ const server = http.createServer(async (req,res)=>{
             console.log("connection closed")
         }
     }*/
-    else if (req.url==='/api')
-    {
-        fs.readFile(
-            path.join(__dirname, 'public', 'db.json'),'utf-8',
-                    (err, content) => {
-                                    
-                                    if (err) throw err;
-                                    res.setHeader("Access-Control-Allow-Origin", "*")
-                                    // Please note the content-type here is application/json
-                                    res.writeHead(200, { 'Content-Type': 'application/json' });
-                                    res.end(content);
-                        }
-              );
+      else if(req.url ==='/api'){
+
+            res.setHeader('Access-Control-Allow-Origin','*');
+            fs.readFile(path.join(__dirname,'public','db.json'),'utf-8',(err, content)=>{
+
+                if (err) throw err;
+                res.writeHead(200, {'Content-Type':'application/json'});
+                res.end(content);
+            })
+
+
+            });
+
     }
     else{
 
