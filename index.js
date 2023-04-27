@@ -39,7 +39,8 @@ const server = http.createServer(async (req,res)=>{
             console.log(results);
             res.setHeader('Content-Type','application/json');
             res.setHeader('Access-Control-Allow-Origin','*');
-            res.end(JSON.stringify(results));
+            const js=JSON.stringify(results);
+            res.end(js);
         }
         catch(e){
             await console.log(e);
