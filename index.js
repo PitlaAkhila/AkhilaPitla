@@ -1,8 +1,11 @@
 const http = require('http');
 const path = require('path');
 const fs = require('fs');
-const cors=require('cors')
-const server = http.createServer((req,res)=>{
+const cors=require('cors');
+const {MongoClient}=require('mongodb');
+const uri="mongodb+srv://AkhilaPitla:Pitla@cluster0.w7uvtqi.mongodb.net/test";
+const client=new MongoClient(uri);
+const server = http.createServer(async (req,res)=>{
 
 
     console.log(req.url);
@@ -27,16 +30,24 @@ const server = http.createServer((req,res)=>{
         })
 
     }
-    else if(req.url ==='/api'){
+    else if(req.url ==='/api' && req.method === 'GET'){
+        try{
+            await client.connect();
+            console.log("connection established");
+            const cursor=client.db("Final").collection("Destination").find({});
+            const results=await cursor.toArray();
+            console.log(results);
+            res.setHeader('Content-Type','application/json');
             res.setHeader('Access-Control-Allow-Origin','*');
-            fs.readFile(path.join(__dirname,'public','db.json'),'utf-8',(err, content)=>{
-
-                if (err) throw err;
-                res.writeHead(200, {'Content-Type':'application/json'});
-                res.end(content);
-            
-            });
-        
+            res.end(JSON.stringify(results));
+        }
+        catch(e){
+            await console.log(e);
+        }
+        finally{
+            await client.close();
+            console.log("connection closed")
+        }
     }
     else{
 
