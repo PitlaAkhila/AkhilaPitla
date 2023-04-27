@@ -49,20 +49,20 @@ const server = http.createServer(async (req,res)=>{
             console.log("connection closed")
         }
     }*/
-      else if(req.url ==='/api'){
+    else if(req.url ==='/api'){
 
-            res.setHeader('Access-Control-Allow-Origin','*');
-            fs.readFile(path.join(__dirname,'public','db.json'),'utf-8',(err, content)=>{
+        res.setHeader('Access-Control-Allow-Origin','*');
+        fs.readFile(path.join(__dirname,'public','db.json'),'utf-8',(err, content)=>{
 
-                if (err) throw err;
-                res.writeHead(200, {'Content-Type':'application/json'});
-                res.end(content);
-            })
+            if (err) throw err;
+            res.writeHead(200, {'Content-Type':'application/json'});
+            res.end(content);
+        })
 
 
-            }
+        }
 
-    }
+
     else{
 
         res.writeHead(404,{'Content-Type':'text/html'});
@@ -74,4 +74,4 @@ const server = http.createServer(async (req,res)=>{
 })
 const PORT= process.env.PORT || 5990;
 
-server.listen(PORT,()=> console.log(`Yayy! server is running on port ${PORT} `));
+server.listen(PORT,()=> console.log(`Great our server is running on port ${PORT} `));
