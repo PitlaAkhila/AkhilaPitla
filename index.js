@@ -30,7 +30,7 @@ const server = http.createServer(async (req,res)=>{
         })
 
     }
-   /* else if(req.url ==='/api' && req.method === 'GET'){
+    else if(req.url ==='/api' && req.method === 'GET'){
         try{
             await client.connect();
             console.log("connection established");
@@ -48,8 +48,8 @@ const server = http.createServer(async (req,res)=>{
             await client.close();
             console.log("connection closed")
         }
-    }*/
-    else if(req.url ==='/api'){
+    }
+    /*else if(req.url ==='/api'){
 
         res.setHeader('Access-Control-Allow-Origin','*');
         fs.readFile(path.join(__dirname,'public','db.json'),'utf-8',(err, content)=>{
@@ -60,7 +60,7 @@ const server = http.createServer(async (req,res)=>{
         })
 
 
-        }
+        }*/
 
 
     else{
