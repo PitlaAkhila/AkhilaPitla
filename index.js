@@ -30,7 +30,7 @@ const server = http.createServer(async (req,res)=>{
         })
 
     }
-    else if(req.url ==='/api' && req.method === 'GET'){
+    else if(req.url ==='/api'){
         try{
             await client.connect();
             console.log("connection established");
